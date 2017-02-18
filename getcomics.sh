@@ -10,7 +10,7 @@
 for i in {1..1776}
 do
 	w3m -dump_source "http://phdcomics.com/comics/archive.php?comicid="$i>test.txt
-	file_line=$(grep "<td bgcolor=#FFFFFF align=center><img id=comic name=comic src=http://www.phdcomics.com/comics/archive/" test.txt)
+	file_line=$(grep "<img id=comic2 name=comic2 src=http://www.phdcomics.com/comics/archive/" test.txt)
 	x="${file_line#*src=}"
 	x="${x%% *}"
 	#echo -n $file_line
